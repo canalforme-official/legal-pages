@@ -67,7 +67,7 @@
     <div class="container">
         <header>
             <img src="https://mcusercontent.com/74abea872abd45d46efed5d41/images/a3e18de2-b08d-e854-5c82-0bee6c2481df.jpg" alt="Canal Forme Logo">
-            <h1 style="font-size: 1.5em;">Privacy Policy / Politique de Confidentialité</h1>
+            <h1 id="page-title" style="font-size: 1.5em;">Privacy Policy</h1>
         </header>
 
         <div class="lang-switch">
@@ -227,20 +227,26 @@
         const enBtn = document.getElementById('en-btn');
         const frContent = document.getElementById('fr-content');
         const enContent = document.getElementById('en-content');
+        const pageTitle = document.getElementById('page-title');
 
-        frBtn.addEventListener('click', () => {
-            frContent.style.display = 'block';
-            enContent.style.display = 'none';
-            frBtn.classList.add('active');
-            enBtn.classList.remove('active');
-        });
+        function setLanguage(lang) {
+            if (lang === 'fr') {
+                frContent.style.display = 'block';
+                enContent.style.display = 'none';
+                frBtn.classList.add('active');
+                enBtn.classList.remove('active');
+                pageTitle.textContent = 'Politique de Confidentialité';
+            } else {
+                frContent.style.display = 'none';
+                enContent.style.display = 'block';
+                enBtn.classList.add('active');
+                frBtn.classList.remove('active');
+                pageTitle.textContent = 'Privacy Policy';
+            }
+        }
 
-        enBtn.addEventListener('click', () => {
-            frContent.style.display = 'block';
-            enContent.style.display = 'none';
-            enBtn.classList.add('active');
-            frBtn.classList.remove('active');
-        });
+        frBtn.addEventListener('click', () => setLanguage('fr'));
+        enBtn.addEventListener('click', () => setLanguage('en'));
     </script>
 </body>
 </html>
