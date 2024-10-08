@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use</title>
+    <title>Terms of Use - Canal Forme</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
         body {
@@ -26,18 +26,17 @@
             text-align: center;
         }
         header img {
-            max-width: 254.88px;
+            max-width: 340px;
             margin-bottom: 20px;
         }
         h1 {
             text-align: center;
             color: #000;
             margin-bottom: 10px;
-            font-size: 2.5em;
         }
         h2 {
-            text-align: left;
             color: #000;
+            text-align: left;
         }
         p, ul {
             text-align: justify;
@@ -47,46 +46,37 @@
             margin-left: 40px;
         }
         .lang-switch {
-            text-align: right;
+            text-align: center;
             margin-bottom: 20px;
         }
         .lang-switch button {
-            background-color: #000;
-            color: white;
-            border: none;
-            padding: 10px;
+            padding: 5px 10px;
+            margin: 0 5px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             cursor: pointer;
         }
-    </style>
-    <script>
-        function switchLanguage(lang) {
-            const frenchSection = document.getElementById('french-content');
-            const englishSection = document.getElementById('english-content');
-            const title = document.getElementById('page-title');
-            if (lang === 'fr') {
-                frenchSection.style.display = 'block';
-                englishSection.style.display = 'none';
-                title.textContent = 'Conditions d\'utilisation';
-            } else {
-                frenchSection.style.display = 'none';
-                englishSection.style.display = 'block';
-                title.textContent = 'Terms of Use';
-            }
+        .lang-switch button.active {
+            background-color: #007bff;
+            color: white;
         }
-    </script>
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="lang-switch">
-            <button onclick="switchLanguage('en')">English</button>
-            <button onclick="switchLanguage('fr')">Français</button>
-        </div>
         <header>
-            <img src="https://mcusercontent.com/74abea872abd45d46efed5d41/images/a3e18de2-b08d-e854-5c82-0bee6c2481df.jpg" alt="MARRAKECH CANAL FORME Logo">
-            <h1 id="page-title">Terms of Use</h1>
+            <img src="https://mcusercontent.com/74abea872abd45d46efed5d41/images/a3e18de2-b08d-e854-5c82-0bee6c2481df.jpg" alt="Canal Forme Logo">
+            <h1 id="page-title" style="font-size: 1.5em;">Terms of Use</h1>
         </header>
 
-        <div id="english-content">
+        <div class="lang-switch">
+            <button id="en-btn" class="active">English</button>
+            <button id="fr-btn">Français</button>
+        </div>
+
+        <div id="en-content">
+            <!-- English content -->
             <h2>1. Acceptance of Terms</h2>
             <p>By accessing our website, mobile application, or associated services, you agree to be bound by these terms of use. If you do not accept these terms, please do not use our services.</p>
 
@@ -116,7 +106,8 @@
             </ul>
         </div>
 
-        <div id="french-content" style="display: none;">
+        <div id="fr-content" style="display: none;">
+            <!-- French content -->
             <h2>1. Acceptation des Conditions</h2>
             <p>En accédant à notre site web, application mobile, ou services associés, vous acceptez d'être lié par les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser nos services.</p>
 
@@ -146,5 +137,32 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        const frBtn = document.getElementById('fr-btn');
+        const enBtn = document.getElementById('en-btn');
+        const frContent = document.getElementById('fr-content');
+        const enContent = document.getElementById('en-content');
+        const pageTitle = document.getElementById('page-title');
+
+        function setLanguage(lang) {
+            if (lang === 'fr') {
+                frContent.style.display = 'block';
+                enContent.style.display = 'none';
+                frBtn.classList.add('active');
+                enBtn.classList.remove('active');
+                pageTitle.textContent = 'Conditions d\'Utilisation';
+            } else {
+                frContent.style.display = 'none';
+                enContent.style.display = 'block';
+                enBtn.classList.add('active');
+                frBtn.classList.remove('active');
+                pageTitle.textContent = 'Terms of Use';
+            }
+        }
+
+        frBtn.addEventListener('click', () => setLanguage('fr'));
+        enBtn.addEventListener('click', () => setLanguage('en'));
+    </script>
 </body>
 </html>
