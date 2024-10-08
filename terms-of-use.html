@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        header {
+            text-align: center;
+        }
+        header img {
+            max-width: 254.88px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #000;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        h2 {
+            text-align: left;
+            color: #000;
+        }
+        p, ul {
+            text-align: justify;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 40px;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-switch button {
+            background-color: #000;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            const frenchSection = document.getElementById('french-content');
+            const englishSection = document.getElementById('english-content');
+            const title = document.getElementById('page-title');
+            if (lang === 'fr') {
+                frenchSection.style.display = 'block';
+                englishSection.style.display = 'none';
+                title.textContent = 'Conditions d\'utilisation';
+            } else {
+                frenchSection.style.display = 'none';
+                englishSection.style.display = 'block';
+                title.textContent = 'Terms of Use';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('fr')">Français</button>
+        </div>
+        <header>
+            <img src="https://mcusercontent.com/74abea872abd45d46efed5d41/images/a3e18de2-b08d-e854-5c82-0bee6c2481df.jpg" alt="MARRAKECH CANAL FORME Logo">
+            <h1 id="page-title">Terms of Use</h1>
+        </header>
+
+        <div id="english-content">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing our website, mobile application, or associated services, you agree to be bound by these terms of use. If you do not accept these terms, please do not use our services.</p>
+
+            <h2>2. Use of Services</h2>
+            <p>Our services are intended for personal use only. You may not use our services for commercial purposes without prior permission. Any abusive or fraudulent use of our services is strictly prohibited.</p>
+
+            <h2>3. User Accounts</h2>
+            <p>To access certain features of our application, you may be required to create a user account. You are responsible for maintaining the confidentiality of your login credentials and all activities that occur under your account.</p>
+
+            <h2>4. Content and Intellectual Property</h2>
+            <p>All content on our website and application (texts, images, logos, etc.) is the property of MARRAKECH CANAL FORME or its partners. Any unauthorized reproduction, distribution, or use of this content is prohibited.</p>
+
+            <h2>5. Privacy Policy</h2>
+            <p>Your use of our services is also governed by our <a href="https://privacy.marrakechcanalforme.com/privacy-policy.html" target="_blank">privacy policy</a>. By using our services, you agree to the collection and use of your information as outlined in this policy.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>MARRAKECH CANAL FORME shall not be held liable for any direct or indirect damages resulting from the use or inability to use our services. We strive to provide quality services, but we do not guarantee their accuracy, completeness, or availability at all times.</p>
+
+            <h2>7. Changes to Terms</h2>
+            <p>We reserve the right to modify these terms of use at any time. Changes will be posted on this page, and it is your responsibility to regularly review this page to stay informed of any changes.</p>
+
+            <h2>8. Contact</h2>
+            <p>If you have any questions regarding these terms of use, you can contact us at:</p>
+            <ul>
+                <li>Postal address: 53, Avenue Abou Baker Essediq, Marrakech 40000</li>
+                <li>Email: <a href="mailto:com@canalforme.com">com@canalforme.com</a></li>
+            </ul>
+        </div>
+
+        <div id="french-content" style="display: none;">
+            <h2>1. Acceptation des Conditions</h2>
+            <p>En accédant à notre site web, application mobile, ou services associés, vous acceptez d'être lié par les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser nos services.</p>
+
+            <h2>2. Utilisation des Services</h2>
+            <p>Nos services sont destinés à un usage personnel uniquement. Vous ne pouvez pas utiliser nos services à des fins commerciales sans autorisation préalable. Toute utilisation abusive ou frauduleuse de nos services est strictement interdite.</p>
+
+            <h2>3. Comptes Utilisateurs</h2>
+            <p>Pour accéder à certaines fonctionnalités de notre application, il peut vous être demandé de créer un compte utilisateur. Vous êtes responsable de la confidentialité de vos identifiants de connexion et de toutes les activités effectuées sous votre compte.</p>
+
+            <h2>4. Contenu et Propriété Intellectuelle</h2>
+            <p>Tout le contenu présent sur notre site et application (textes, images, logos, etc.) est la propriété de MARRAKECH CANAL FORME ou de ses partenaires. Toute reproduction, distribution ou utilisation non autorisée de ce contenu est interdite.</p>
+
+            <h2>5. Politique de Confidentialité</h2>
+            <p>Votre utilisation de nos services est également régie par notre <a href="https://privacy.marrakechcanalforme.com/privacy-policy.html" target="_blank">politique de confidentialité</a>. En utilisant nos services, vous acceptez la collecte et l'utilisation de vos informations comme indiqué dans cette politique.</p>
+
+            <h2>6. Limitation de Responsabilité</h2>
+            <p>MARRAKECH CANAL FORME ne saurait être tenu responsable des dommages directs ou indirects pouvant résulter de l'utilisation ou de l'incapacité à utiliser nos services. Nous nous efforçons de fournir des services de qualité, mais nous ne garantissons pas leur exactitude, complétude ou disponibilité en tout temps.</p>
+
+            <h2>7. Modification des Conditions</h2>
+            <p>Nous nous réservons le droit de modifier ces conditions d'utilisation à tout moment. Les modifications seront publiées sur cette page, et il est de votre responsabilité de consulter régulièrement cette page pour vous tenir informé des changements.</p>
+
+            <h2>8. Contact</h2>
+            <p>Pour toute question concernant ces conditions d'utilisation, vous pouvez nous contacter à l'adresse suivante :</p>
+            <ul>
+                <li>Adresse postale : 53, Avenue Abou Baker Essediq, Marrakech 40000</li>
+                <li>Adresse électronique : <a href="mailto:com@canalforme.com">com@canalforme.com</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
