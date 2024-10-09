@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal Forme App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        header {
+            text-align: center;
+        }
+        header img {
+            max-width: 340px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #000;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #000;
+            text-align: left;
+        }
+        p, ul {
+            text-align: justify;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 40px;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .lang-switch button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .lang-switch button.active {
+            background-color: #007bff;
+            color: white;
+        }
+        .app-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .app-buttons img {
+            max-width: 200px;
+        }
+        .red-line {
+            height: 3px;
+            background-color: #ff0000;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://mcusercontent.com/74abea872abd45d46efed5d41/images/a3e18de2-b08d-e854-5c82-0bee6c2481df.jpg" alt="Canal Forme Logo">
+            <h1>APPLICATION CANAL FORME</h1>
+            <div class="red-line"></div>
+        </header>
+
+        <div class="lang-switch">
+            <button id="en-btn" class="active">English</button>
+            <button id="fr-btn">Français</button>
+        </div>
+
+        <div id="en-content">
+            <h2>Mobile application for Android / iOS</h2>
+            
+            <div class="app-buttons">
+                <img src="https://mcusercontent.com/74abea872abd45d46efed5d41/images/c1ebf74e-aca0-6f99-edc0-7c4bded446c8.png" alt="Android app on Google Play">
+                <img src="https://mcusercontent.com/74abea872abd45d46efed5d41/images/6f105626-9261-f5fb-1562-5f2c64d4152e.png" alt="Available on the App Store">
+            </div>
+
+            <p>Stay permanently connected to your favorite Club: Canal Forme and the world of Fitness and well-being thanks to this online application with multiple features.</p>
+
+            <p>You will find in particular:</p>
+            <ul>
+                <li>Your Live Group Class Schedule</li>
+                <li>Deals & Promotions</li>
+                <li>A Presentation of the club (images - videos...)</li>
+                <li>The Canal Forme Blog</li>
+                <li>Program and photos of Events organized at the club</li>
+                <li>MyZone Leaderboard</li>
+                <li>A Contact page</li>
+            </ul>
+
+            <h2>Live Group Class Schedule</h2>
+            <p>Our app now features a live schedule of group classes. You can view classes on a daily or weekly basis, allowing you to plan your workouts more effectively. Classes are updated in real-time, so you'll always have the most current information.</p>
+
+            <h2>MyZone Leaderboard</h2>
+            <p>Track your progress and compete with fellow members using our integrated MyZone leaderboard. This feature allows you to see your effort zones, calories burned, and how you rank among other Canal Forme members. It's a great way to stay motivated and push yourself to new fitness levels.</p>
+        </div>
+
+        <div id="fr-content" style="display: none;">
+            <h2>Application mobile Android / iOS</h2>
+            
+            <div class="app-buttons">
+                <img src="https://mcusercontent.com/74abea872abd45d46efed5d41/images/c1ebf74e-aca0-6f99-edc0-7c4bded446c8.png" alt="Application Android sur Google Play">
+                <img src="https://mcusercontent.com/74abea872abd45d46efed5d41/images/6f105626-9261-f5fb-1562-5f2c64d4152e.png" alt="Disponible sur l'App Store">
+            </div>
+
+            <p>Restez connecté en permanence à votre Club favori : Canal Forme et au monde du Fitness et du bien être grâce à cette application en ligne aux multiples fonctionnalités.</p>
+
+            <p>Vous y trouverez notamment :</p>
+            <ul>
+                <li>Votre Planning des cours collectifs en direct</li>
+                <li>Des Deals & Promotions</li>
+                <li>Une Présentation du club (images - vidéos...)</li>
+                <li>Le Blog de Canal Forme</li>
+                <li>Le programme et photos des Evènements organisées au club</li>
+                <li>Le Classement MyZone</li>
+                <li>Une page Contact</li>
+            </ul>
+
+            <h2>Planning des cours collectifs en direct</h2>
+            <p>Notre application propose désormais un planning en direct des cours collectifs. Vous pouvez consulter les cours sur une base quotidienne ou hebdomadaire, ce qui vous permet de planifier vos séances d'entraînement plus efficacement. Les cours sont mis à jour en temps réel, vous aurez donc toujours les informations les plus récentes.</p>
+
+            <h2>Classement MyZone</h2>
+            <p>Suivez vos progrès et rivalisez avec les autres membres grâce à notre classement MyZone intégré. Cette fonctionnalité vous permet de voir vos zones d'effort, les calories brûlées et votre classement parmi les autres membres de Canal Forme. C'est un excellent moyen de rester motivé et de vous pousser vers de nouveaux niveaux de forme physique.</p>
+        </div>
+
+        <footer>
+            <p>MARRAKECH CANAL FORME &copy; <span id="current-year"></span> All rights reserved</p>
+            <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a></p>
+        </footer>
+    </div>
+
+    <script>
+        const frBtn = document.getElementById('fr-btn');
+        const enBtn = document.getElementById('en-btn');
+        const frContent = document.getElementById('fr-content');
+        const enContent = document.getElementById('en-content');
+
+        function setLanguage(lang) {
+            if (lang === 'fr') {
+                frContent.style.display = 'block';
+                enContent.style.display = 'none';
+                frBtn.classList.add('active');
+                enBtn.classList.remove('active');
+            } else {
+                frContent.style.display = 'none';
+                enContent.style.display = 'block';
+                enBtn.classList.add('active');
+                frBtn.classList.remove('active');
+            }
+        }
+
+        frBtn.addEventListener('click', () => setLanguage('fr'));
+        enBtn.addEventListener('click', () => setLanguage('en'));
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
