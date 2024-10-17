@@ -61,9 +61,24 @@
             background-color: #007bff;
             color: white;
         }
+            .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background-color: #e0e0e0;
+        }
     </style>
 </head>
 <body>
+    <button class="back-button" onclick="history.back()">← Back</button>
     <div class="container">
         <header>
             <img src="https://mcusercontent.com/74abea872abd45d46efed5d41/images/a3e18de2-b08d-e854-5c82-0bee6c2481df.jpg" alt="Canal Forme Logo">
